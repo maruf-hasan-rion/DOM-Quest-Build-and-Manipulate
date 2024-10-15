@@ -10,22 +10,42 @@
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/9a8c31e657.js" crossorigin="anonymous"></script>
     <style>
         .font-lexend {
             font-family: "Lexend", sans-serif;
         }
 
-        header {
+        /* header {
             position: sticky;
             top: 0;
             overflow: hidden;
 
-        }
+        } */
     </style>
 </head>
 
 <body>
-    <div>
+    <header class=" my-8">
+        <nav class="flex  mx-auto w-11/12">
+            <button class="text-xl bg-lime-400 font-bold px-8 py-3 rounded-lg"><a href="index.html"
+                    rel="noopener noreferrer">Home</a></button>
+            <div class="flex w-2/5 justify-center items-center gap-4 mx-auto">
+                <img src="assets/logo.png" alt="">
+                <p class="text-xl font-bold">Donate Bangladesh</p>
+            </div>
+            <div class="flex w-1/5 justify-end items-center gap-4">
+                <img src="assets/coin.png" alt="">
+                <p class="font-bold "> <span id="main-balance">5500</span> BDT</p>
+            </div>
+
+        </nav>
+    </header>
+
+    <div class="p-8 my-8">
+        <h3 class="text-4xl font-bold">Important FAQ <i class="fa-solid fa-question"></i></h3>
+    </div>
+    <div class="mb-8">
         <div class="collapse collapse-arrow bg-base-200">
             <input type="radio" name="my-accordion-2" checked="checked" />
             <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
