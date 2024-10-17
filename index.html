@@ -15,24 +15,25 @@
             font-family: "Lexend", sans-serif;
         }
 
-        /* header {
+        header {
             position: fixed;
             width: 100%;
             top: 0;
-            padding: 50px;
-            overflow: hidden;
-        } */
+            z-index: 9999;
+            background: transparent;
+            backdrop-filter: blur(50px);
+        }
     </style>
 </head>
 
-<body class="font-lexend">
-    <header class=" my-8">
-        <nav class="lg:flex mx-auto w-11/12 ">
+<body class="font-lexend pt-40">
+    <header class="py-4">
+        <nav class="flex mx-auto w-11/12 ">
             <button class="text-xl bg-lime-400 font-bold px-8 py-3 rounded-lg"><a href="blog.html"
                     rel="noopener noreferrer">Blog</a></button>
             <div class="flex w-2/5 justify-center items-center gap-4 mx-auto">
                 <img src="assets/logo.png" alt="">
-                <p class="text-xl font-bold">Donate Bangladesh</p>
+                <p class="text-xl font-bold hidden lg:block">Donate Bangladesh</p>
             </div>
             <div class="flex w-1/5 justify-end items-center gap-4">
                 <img src="assets/coin.png" alt="">
@@ -40,7 +41,7 @@
             </div>
         </nav>
         <!-- tab-section -->
-        <div class="w-2/5 mx-auto px-16 mt-16 sticky">
+        <div class="flex lg:w-2/5 mx-auto px-16 mt-8 ">
             <!-- donation button -->
             <button id="donation-tab"
                 class="text-xl bg-lime-400 font-bold px-8 py-3 border-2 rounded-lg mr-4 active">Donation</button>
@@ -53,11 +54,11 @@
         <!-- donate-section -->
         <div id="donate-section" class="m-16">
             <!-- donate-noakhali -->
-            <div class="card lg:card-side bg-base-100 shadow-xl p-8 border-2 rounded-lg">
-                <figure class="w-6/12">
+            <div class="card lg:card-side bg-base-100 shadow-xl lg:p-8 my-4 border-2 rounded-lg">
+                <figure class="lg:w-6/12">
                     <img src="assets/noakhali.png" alt="Album" />
                 </figure>
-                <div class="card-body w-6/12 py-0">
+                <div class="card-body lg:w-6/12">
                     <button class="btn justify-start w-fit">
                         <img src="assets/coin.png" alt=""> <span id="donate-balance"> 0 </span>BDT
                     </button>
@@ -70,8 +71,7 @@
                         class="input input-bordered w-full py-6" />
                     <div class="card-actions">
                         <!-- You can open the modal using ID.showModal() method -->
-                        <button id="btn-donate-now" class="btn bg-lime-400 w-full text-xl font-bold"
-                            onclick="my_modal_3.showModal()">Donate Now</button>
+                        <button id="btn-donate-now" class="btn bg-lime-400 w-full text-xl font-bold">Donate Now</button>
                         <dialog id="my_modal_3" class="modal">
                             <div class="modal-box flex flex-col justify-center items-center gap-6">
                                 <h3 class="text-4xl font-bold">Congrates!</h3>
@@ -88,13 +88,13 @@
                 </div>
             </div>
             <!-- donate-feni -->
-            <div class="card lg:card-side bg-base-100 shadow-xl p-8 border-2 rounded-lg mb-8">
-                <figure class="w-6/12">
+            <div class="card lg:card-side bg-base-100 shadow-xl lg:p-8 border-2 rounded-lg mb-8">
+                <figure class="lg:w-6/12">
                     <img src="assets/feni.png" alt="Album" />
                 </figure>
-                <div class="card-body w-6/12 py-0">
+                <div class="card-body lg:w-6/12">
                     <button class="btn justify-start w-fit">
-                        <img src="assets/coin.png" alt=""> <span id="donate-balance"> 0 </span>BDT
+                        <img src="assets/coin.png" alt=""> <span id="donate-balance2"> 0 </span>BDT
 
                     </button>
                     <h2 class="card-title my-4">Donate for Flood Relief in Feni,Bangladesh</h2>
@@ -103,12 +103,12 @@
                         medical supplies, to those affected by this calamity. Together, we can offer crucial support and
                         help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a
                         real difference. Please consider donating today to assist those in urgent need. </p>
-                    <input id="input-donate-amount" type="text" placeholder="Write Donation Amount"
+                    <input id="input-donate-amount2" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full py-6" />
                     <div class="card-actions">
                         <!-- You can open the modal using ID.showModal() method -->
-                        <button id="btn-donate-now" class="btn bg-lime-400 w-full text-xl font-bold"
-                            onclick="my_modal_3.showModal()">Donate Now</button>
+                        <button id="btn-donate-now2" class="btn bg-lime-400 w-full text-xl font-bold">Donate
+                            Now</button>
                         <dialog id="my_modal_3" class="modal">
                             <div class="modal-box flex flex-col justify-center items-center gap-6">
                                 <h3 class="text-4xl font-bold">Congrates!</h3>
@@ -125,13 +125,13 @@
                 </div>
             </div>
             <!-- donate-quota-protest -->
-            <div class="card lg:card-side bg-base-100 shadow-xl p-8 border-2 rounded-lg mb-8">
-                <figure class="w-6/12">
+            <div class="card lg:card-side bg-base-100 shadow-xl lg:p-8 border-2 rounded-lg mb-8">
+                <figure class="lg:w-6/12">
                     <img src="assets/quota-protest.png" alt="Album" />
                 </figure>
-                <div class="card-body w-6/12 py-0">
+                <div class="card-body lg:w-6/12">
                     <button class="btn justify-start w-fit">
-                        <img src="assets/coin.png" alt=""> <span id="donate-balance"> 0 </span>BDT
+                        <img src="assets/coin.png" alt=""> <span id="donate-balance3"> 0 </span>BDT
 
                     </button>
                     <h2 class="card-title my-4">Aid for Injured in the Quota Movement</h2>
@@ -141,12 +141,12 @@
                         receive the care and support they need during this challenging time. Every donation plays a
                         vital role in alleviating their suffering and aiding in their recovery. Please consider making a
                         donation to support these brave individuals in their time of need.</p>
-                    <input id="input-donate-amount" type="text" placeholder="Write Donation Amount"
+                    <input id="input-donate-amount3" type="text" placeholder="Write Donation Amount"
                         class="input input-bordered w-full py-6" />
                     <div class="card-actions">
                         <!-- You can open the modal using ID.showModal() method -->
-                        <button id="btn-donate-now" class="btn bg-lime-400 w-full text-xl font-bold"
-                            onclick="my_modal_3.showModal()">Donate Now</button>
+                        <button id="btn-donate-now3" class="btn bg-lime-400 w-full text-xl font-bold">Donate
+                            Now</button>
                         <dialog id="my_modal_3" class="modal">
                             <div class="modal-box flex flex-col justify-center items-center gap-6">
                                 <h3 class="text-4xl font-bold">Congrates!</h3>
@@ -169,7 +169,6 @@
 
         </div>
     </main>
-    <footer></footer>
     <script src="js/utilities.js"></script>
     <script src="js/donate-now.js"></script>
 </body>
